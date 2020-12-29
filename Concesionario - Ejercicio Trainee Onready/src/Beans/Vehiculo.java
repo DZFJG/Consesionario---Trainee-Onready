@@ -6,6 +6,7 @@ public class Vehiculo {
 	private String marca;
 	private String modelo;
 	private double precio;
+	private static final DecimalFormat FORMATO_PRECIO = new DecimalFormat("$#,###.00");
 	
 	public Vehiculo(String marca, String modelo, double precio) {
 		this.setMarca(marca);
@@ -38,6 +39,10 @@ public class Vehiculo {
 
 	public void setPrecio(double precio) {
 		this.precio = precio;
+	}
+	
+	public static DecimalFormat getFormatoPrecio() {
+		return FORMATO_PRECIO;
 	}
 
 	@Override
