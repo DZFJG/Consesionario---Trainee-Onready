@@ -1,5 +1,6 @@
 package Services;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -61,11 +62,11 @@ public class IVehiculoImpl implements IVehiculo{
 		this.cargarVehiculos();
 		this.listaVehiculos.forEach(v -> System.out.println(v.toString()));
 		System.out.println("=============================");
-		System.out.println("vehiculo más caro: " + this.vehiculoMasCaro().getMarca() + " " + this.vehiculoMasCaro().getModelo());
-		System.out.println("vehiculo más barato: " + this.vehiculoMasBarato().getMarca() + " " + this.vehiculoMasBarato().getModelo());
-		System.out.println("Vehículo que contiene en el modelo la letra ‘Y’: " + this.modeloConLetra("Y").getMarca() + " " + this.modeloConLetra("Y").getModelo() + " $" + this.modeloConLetra("Y").getPrecio());
+		System.out.println("vehiculo mÃ¡s caro: " + this.vehiculoMasCaro().getMarca() + " " + this.vehiculoMasCaro().getModelo());
+		System.out.println("vehiculo mÃ¡s barato: " + this.vehiculoMasBarato().getMarca() + " " + this.vehiculoMasBarato().getModelo());
+		System.out.println("VehÃ­culo que contiene en el modelo la letra â€˜Yâ€™: " + this.modeloConLetra("Y").getMarca() + " " + this.modeloConLetra("Y").getModelo() + " " + new DecimalFormat("$#,###.00").format(this.modeloConLetra("Y").getPrecio()));
 		System.out.println("=============================");
-		System.out.println("Vehículos ordenados por precio de mayor a menor");
+		System.out.println("VehÃ­culos ordenados por precio de mayor a menor");
 		this.ordenarVehiculosPorPrecio();
 		this.listaVehiculos.forEach(v -> System.out.println(v.getMarca() + " " + v.getModelo()));
 	}
