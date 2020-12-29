@@ -18,6 +18,6 @@ public class Automovil extends Vehiculo {
 	
 	@Override
 	public String toString() {
-		return "Marca: " + getMarca() + " // Modelo: " + getModelo() + " // Puertas: " + getPuertas() + " // Precio: $" + getPrecio();
+		return "Marca: " + getMarca() + " // Modelo: " + getModelo() + " // Puertas: " + getPuertas() + "cc // Precio: " + getFormatoPrecio().format(getPrecio());
 	}
 }
