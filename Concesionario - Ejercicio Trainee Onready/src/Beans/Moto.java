@@ -18,6 +18,6 @@ public class Moto extends Vehiculo {
 	
 	@Override
 	public String toString() {
-		return "Marca: " + getMarca() + " // Modelo: " + getModelo() + " // Cilindradas: " + getCilindradas() + "cc // Precio: $" + getPrecio();
+		return "Marca: " + getMarca() + " // Modelo: " + getModelo() + " // Cilindradas: " + getCilindradas() + "cc // Precio: " + getFormatoPrecio().format(getPrecio());
 	}
 }
