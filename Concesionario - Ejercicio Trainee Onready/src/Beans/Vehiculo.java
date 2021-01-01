@@ -1,6 +1,6 @@
 package Beans;
 
-
+import java.text.DecimalFormat;
 
 public class Vehiculo {
 	private String marca;
